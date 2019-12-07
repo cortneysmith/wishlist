@@ -6,7 +6,7 @@ const wishlistItems = [
       "https://www.containerstore.com/s/jewelry-storage/view-all-jewelry-storage/triple-tiered-jewelry-organizer/12d?productId=11006910",
     details: "",
     price: 21.99,
-    highPriority: true,
+    highPriority: false,
     thumbURL: "images/wishlist/jewlerystorage.png"
   },
 
@@ -17,8 +17,30 @@ const wishlistItems = [
       "https://smile.amazon.com/dp/B000JQM1DE/?coliid=I1A0FHSY5YAC44&colid=131A43LMVLIBX&psc=1&ref_=lv_ov_lig_dp_it",
     details: "It’s pricey - would be good gift from a group, though? 😍",
     price: 149.99,
-    highPriority: true,
+    highPriority: false,
     thumbURL: "images/wishlist/sewingmachine.png"
+  },
+
+  {
+    name: "Kensington Smartsockets Surge Protector ",
+    linkName: "Amazon",
+    linkURL:
+      "https://smile.amazon.com/Kensington-SmartSockets-Protector-Charging-K64494NA/dp/B07D1YQ1TW/",
+    details: "",
+    price: 49.99,
+    highPriority: true,
+    thumbURL: "images/wishlist/surgeprotector.png"
+  },
+
+  {
+    name: "MidWest Crate Mat",
+    linkName: "Chewy",
+    linkURL:
+      "https://www.chewy.com/midwest-quiet-time-fleece-reversible/dp/102268",
+    details: "Size: 42 inch",
+    price: 28,
+    highPriority: false,
+    thumbURL: "images/wishlist/cratemat.png"
   },
 
   {
@@ -30,16 +52,6 @@ const wishlistItems = [
     price: 24.99,
     highPriority: false,
     thumbURL: "images/wishlist/hallelujahshirt.png"
-  },
-  {
-    name: "Taotronics Bluetooth Noise-Cancelling Headphones",
-    linkName: "Amazon",
-    linkURL:
-      "https://smile.amazon.com/dp/B07TPDTM71/?coliid=ITR5BQ31BQBP0&colid=131A43LMVLIBX&psc=1&ref_=lv_ov_lig_dp_it",
-    details: "",
-    price: 89.99,
-    highPriority: false,
-    thumbURL: "images/wishlist/headphones.png"
   },
   {
     name: "Cat Lady Old Maid",
@@ -58,7 +70,7 @@ const wishlistItems = [
     details:
       "Not to replace a full-size calendar, but still cute to have on my desk or mantel!",
     price: 12.99,
-    highPriority: true,
+    highPriority: false,
     thumbURL: "images/wishlist/2020promisecalendar.png"
   }
 ];

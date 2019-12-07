@@ -1,26 +1,25 @@
+/* ============================================= */
+/* VARIABLES ----------------------------------  */
+/* ============================================= */
 :root {
   /* COLORS */
   --light-mint: #7fe0b0;
   --dark-mint: #39ad73;
   --dark-blue: #343a91;
   --light-blue: #5668d1;
-  --teal: #578a9f;
-  --light-teal: #6ca8c2;
   --dark-gray: #333333;
-  --dark-gray-hover: #444444;
-  --medium-gray: #777777;
-  --light-gray: #cccccc;
+  --high-priority: #ff5f15;
 
   /* FONTS */
   --main-font: "Poppins", sans-serif;
   --title-font: "Lobster Two", cursive;
   --subtitle-font: "Poppins", sans-serif;
   --monospace-font: "Space Mono", monospace;
-
-  --mobile-width: 500px;
-  --tablet-width: 1024px;
 }
 
+/* ============================================= */
+/* LAYOUT / CONTAINER STYLES ------------------  */
+/* ============================================= */
 #root {
   margin: 0 100px;
 }
@@ -39,6 +38,7 @@ body {
   margin: 0;
 }
 
+/* header styles */
 h1,
 h2,
 h3,
@@ -56,6 +56,17 @@ h1 {
   font-weight: normal;
 }
 
+/* font sizes for phone / tablet */
+@media (max-width: 1024px) {
+  body {
+    font-size: 0.9em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+}
+
+/* LINK STYLES --------------------------------  */
 a,
 a:active,
 a:visited {
@@ -69,53 +80,44 @@ a:hover {
   border-bottom: 1px dotted var(--dark-mint);
 }
 
-/* ============================================= */
-/* WISHLIST VARIABLES -------------------------  */
-/* ============================================= */
 #wishlistContainer {
-  --inside-borders: #cccccc;
-  --high-priority: #ff5f15;
   margin-bottom: 20px;
 }
 
-/* ============================================= */
-/* HEADER ROW ---------------------------------  */
-/* ============================================= */
-.wishlist-header-row {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 30px 100px 2fr 2fr 100px 2fr;
-}
-
-.wishlist-header-row {
-  font-family: var(--subtitle-font);
-  text-transform: uppercase;
-  background: #777;
+#wishlistContainer p {
   color: #fff;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  text-align: center;
 }
 
 /* ============================================= */
 /* ROW STYLES ---------------------------------  */
 /* ============================================= */
-.wishlist-row {
+/* global row styles */
+.wishlist-row,
+.wishlist-header-row {
   display: grid;
-  background: #fff;
+  align-items: stretch;
+  grid-template-columns: 50px 130px 2fr 2fr 100px 2fr;
+}
+
+/* phone css */
+@media (max-width: 800px) {
+  .wishlist-row,
+  .wishlist-header-row {
+    grid-template-columns: 50px 2fr 2fr 100px 2fr;
+  }
+}
+
+/* header row only */
+.wishlist-header-row {
   align-items: center;
-  grid-template-columns: 30px auto 2fr 2fr 100px 2fr;
+  text-transform: uppercase;
+  color: #fff;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
-.wishlist-row:nth-of-type(2n) {
-  background: #ededed;
-}
-
-.wishlist-row:last-of-type {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom: 5px solid #777;
-}
-
+/* high priority row only */
 .wishlist-highpriority {
   color: var(--high-priority);
 }
@@ -123,40 +125,55 @@ a:hover {
 /* ============================================= */
 /* COLUMN STYLES ------------------------------  */
 /* ============================================= */
+/* global column styles */
 .wishlist-col,
 .wishlist-header-col {
+  display: grid;
   padding: 10px;
   text-align: center;
+  margin: 2px;
+  border-radius: 3px;
+  align-items: center;
+  justify-items: center;
 }
 
+/* header columns only */
+.wishlist-header-col {
+  background: #777;
+}
+
+/* alternate column colors  */
+.wishlist-col {
+  background: #fff;
+}
+.wishlist-row:nth-of-type(2n) .wishlist-col {
+  background: #ededed;
+}
+
+/* PROPERTY-SPECIFIC COLUMN STYLES ------------  */
+/*  priority column */
 .wishlist-priority {
   color: var(--high-priority);
   font-size: 1.5em;
 }
 
-.wishlist-name {
-  border-left: 1px solid var(--inside-borders);
-  border-right: 1px solid var(--inside-borders);
+/* name column (phone only) */
+@media (max-width: 800px) {
+  .wishlist-name {
+    border-left: 0;
+  }
 }
-
-.wishlist-link,
-.wishlist-price {
-  border-right: 1px solid var(--inside-borders);
-}
-
+/* price column */
 .wishlist-price {
   font-weight: bold;
 }
-
+/* details column */
 .wishlist-details {
   padding-left: 20px;
-  text-align: left;
+  justify-items: left;
 }
 
-/* ============================================= */
-/* MISC STYLES --------------------------------  */
-/* ============================================= */
-.wishlist-img {
-  width: 100px;
-  margin-right: 10px;
+/* image column (image object style) */
+.wishlist-img img {
+  max-width: 100px;
 }
