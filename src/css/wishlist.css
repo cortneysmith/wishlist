@@ -21,7 +21,13 @@
 /* LAYOUT / CONTAINER STYLES ------------------  */
 /* ============================================= */
 #root {
-  margin: 0 100px;
+  margin: 0 10%;
+}
+
+@media (max-width: 1024px) {
+  #root {
+    margin: 0 5%;
+  }
 }
 
 html {
