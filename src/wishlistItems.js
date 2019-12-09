@@ -3,7 +3,7 @@ const wishlistItems = [
     name: "Jewelry Stand",
     linkName: "Amazon",
     linkURL: "https://www.amazon.com/dp/B06Y6DLBG6/",
-    details: "",
+    details: "Color: White and Carbonized Black",
     price: 19.99,
     highPriority: false,
     thumbURL: "images/wishlist/jewelrystand.png"
