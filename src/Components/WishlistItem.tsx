@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 interface WishlistProperties extends React.Props<any> {
   index: any;
   details: any;
-  renderMobile: boolean;
+  renderOptions: { renderMobile: boolean; renderTablet: boolean };
 }
 
 class WishlistItem extends React.Component<WishlistProperties, any> {
@@ -41,7 +41,7 @@ class WishlistItem extends React.Component<WishlistProperties, any> {
       thumbURL
     } = this.props.details;
 
-    var renderMobile = this.props.renderMobile;
+    var renderOptions = this.props.renderOptions;
 
     var classnames = require("classnames");
     var wishlistRowClass = classnames({
@@ -49,28 +49,77 @@ class WishlistItem extends React.Component<WishlistProperties, any> {
       "wishlist-highpriority": highPriority
     });
 
-    var imageTag;
-    if (!renderMobile) {
-      imageTag = (
-        <div className="wishlist-col wishlist-img">
-          <img src={thumbURL} alt={name} />
-        </div>
-      );
-    }
-    return (
-      <div className={wishlistRowClass}>
+    var priority;
+    if (
+      !renderOptions.renderMobile ||
+      (renderOptions.renderMobile && highPriority)
+    ) {
+      priority = (
         <div className="wishlist-col wishlist-priority">
           {highPriority ? "★" : ""}
         </div>
-        {imageTag}
-        <div className="wishlist-col wishlist-name">{name}</div>
-        <div className="wishlist-col wishlist-link">
+      );
+    }
+
+    var itemImage;
+    if (!renderOptions.renderTablet || renderOptions.renderMobile) {
+      itemImage = (
+        <div className="wishlist-col wishlist-img">
           <a href={linkURL} target="_blank">
-            {linkName}
+            <img src={thumbURL} alt={name} />
           </a>
         </div>
-        <div className="wishlist-col wishlist-price">{"$" + price}</div>
+      );
+    }
+
+    var itemName = <div className="wishlist-col wishlist-name">{name}</div>;
+    if (renderOptions.renderMobile) {
+      itemName = (
+        <div className="wishlist-col wishlist-name">
+          <h3>{name}</h3>
+        </div>
+      );
+    }
+    var itemDetails;
+    if (!(details === "" && renderOptions.renderMobile)) {
+      itemDetails = (
         <div className="wishlist-col wishlist-details">{details}</div>
+      );
+    }
+
+    var itemLink;
+    itemLink = (
+      <div className="wishlist-col wishlist-link">
+        <a href={linkURL} target="_blank">
+          {linkName}
+        </a>
+      </div>
+    );
+
+    var itemPrice;
+
+    itemPrice = (
+      <div className="wishlist-col wishlist-price">{"$" + price}</div>
+    );
+
+    var itemLinkAndPrice;
+    if (renderOptions.renderMobile) {
+      itemLinkAndPrice = (
+        <div className="item-inner-grid">
+          {itemLink} {itemPrice}
+        </div>
+      );
+    }
+
+    return (
+      <div className={wishlistRowClass}>
+        {priority}
+        {itemName}
+        {itemImage}
+        {itemLinkAndPrice}
+        {itemLink}
+        {itemPrice}
+        {itemDetails}
       </div>
     );
   }
