@@ -1,13 +1,12 @@
 const wishlistItems = [
   {
-    name: "Jewelry Organizer",
-    linkName: "The Container Store",
-    linkURL:
-      "https://www.containerstore.com/s/jewelry-storage/view-all-jewelry-storage/triple-tiered-jewelry-organizer/12d?productId=11006910",
+    name: "Jewelry Stand",
+    linkName: "Amazon",
+    linkURL: "https://www.amazon.com/dp/B06Y6DLBG6/",
     details: "",
-    price: 21.99,
+    price: 19.99,
     highPriority: false,
-    thumbURL: "images/wishlist/jewlerystorage.png"
+    thumbURL: "images/wishlist/jewelrystand.png"
   },
 
   {
