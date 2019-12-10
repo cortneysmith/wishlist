@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import wishlistItems from "../wishlistItems";
 import WishlistItem from "./WishlistItem";
 import "../css/wishlist.css";
+import "../css/mobile.css";
 
 class Wishlist extends Component {
   state = {
@@ -27,7 +28,7 @@ class Wishlist extends Component {
     this.wishlistItems = wishlistItems;
   }
 
-  componentWillMount() {
+  componentDidMount() {
     window.addEventListener("resize", this.handleWindowSizeChange);
     this.handleWindowSizeChange();
   }
@@ -45,23 +46,12 @@ class Wishlist extends Component {
 
   render() {
     var render = this.state.renderOptions;
-    var pictureHeader;
-    if (!render.renderTablet)
-      pictureHeader = <div className="wishlist-header-col">Picture</div>;
     return (
       <div id="wishlistContainer">
         <h1>Cortney's Dope Wishlist</h1>
         <p>
           ★ = high priority <br></br>(otherwise, order doesn't matter)
         </p>
-        <div className="wishlist-header-row">
-          <div className="wishlist-header-col">★</div>
-          <div className="wishlist-header-col">Name</div>
-          {pictureHeader}
-          <div className="wishlist-header-col">Link to Buy</div>
-          <div className="wishlist-header-col">Price</div>
-          <div className="wishlist-header-col">Details</div>
-        </div>
         {Object.keys(this.wishlistItems).map(key => (
           <WishlistItem
             key={key}
@@ -70,7 +60,7 @@ class Wishlist extends Component {
             renderOptions={render}
           />
         ))}
-        <div className="last-updated">Last Updated: 12/09/2019</div>
+        <div className="last-updated">Last Updated: 12/10/2019</div>
       </div>
     );
   }
