@@ -4,7 +4,7 @@ const wishlistItems = [
     linkName: "",
     linkURL: "",
     details:
-      "Decent quality photo-scanner (for digitizing photos and stickers).",
+      "Decent quality photo-scanner (for digitizing photos and stickers). Doesn't need fancy cloud apps or software - just want to end up with JPGs or PDFs or something.",
     price: 0,
     highPriority: false,
     thumbURL: "",
