@@ -11,6 +11,16 @@ const wishlistItems = [
     idea: true
   },
   {
+    name: "'Pray More, Worry Less' Mug",
+    linkName: "DaySpring",
+    linkURL: "https://www.dayspring.com/pray-more-worry-less-jumbo-mug",
+    details: "",
+    price: 16.00,
+    highPriority: false,
+    thumbURL: "images/wishlist/praymoreworryless.png",
+    idea: false
+  },
+  {
     name: "Jewelry Stand",
     linkName: "Amazon",
     linkURL: "https://www.amazon.com/dp/B06Y6DLBG6/",
