@@ -190,6 +190,7 @@ a:hover {
 /* image column (image object style) */
 .wishlist-img img {
   max-width: 100%;
+  border-radius: 5px;
 }
 
 .wishlist-row:nth-last-of-type(1) {

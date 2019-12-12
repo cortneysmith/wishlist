@@ -1,5 +1,15 @@
 const wishlistItems = [
   {
+    name: "'Survive, Chuckle, Show Affection' Print",
+    linkName: "Threadless",
+    linkURL: "https://nathanwpyle.threadless.com/designs/strange-planet-special-product-survive-chuckle-show-affection-characters/home/fine-art-print?size=16x16",
+    details: "Home > Fine Art Print (no frame). Size 16\"x16\" (or 18\"x18\" is good too). ",
+    price: 25,
+    highPriority: false,
+    thumbURL: "images/wishlist/survivechuckleaffection.png",
+    idea: false
+  },  
+  {
     name: "Photo Scanner",
     linkName: "",
     linkURL: "",
