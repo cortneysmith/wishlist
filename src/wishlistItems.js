@@ -1,25 +1,14 @@
 const wishlistItems = [
   {
-    name: "'Survive, Chuckle, Show Affection' Print",
-    linkName: "Threadless",
-    linkURL: "https://nathanwpyle.threadless.com/designs/strange-planet-special-product-survive-chuckle-show-affection-characters/home/fine-art-print?size=16x16",
-    details: "Home > Fine Art Print (no frame). Size 16\"x16\" (or 18\"x18\" is good too). ",
-    price: 25,
+    name: "The Very Best of The Babylon Bee",
+    linkName: "The Babylon Bee",
+    linkURL: "https://shop.babylonbee.com/collections/most-popular/products/beebook",
+    details: "Price is sale price, don't pay the $40 normal price.",
+    price: 29.99,
     highPriority: false,
-    thumbURL: "images/wishlist/survivechuckleaffection.png",
+    thumbURL: "images/wishlist/bestofbabylonbee.jpg",
     idea: false
   },  
-  {
-    name: "Photo Scanner",
-    linkName: "",
-    linkURL: "",
-    details:
-      "Decent quality photo-scanner (for digitizing photos and stickers). Doesn't need fancy cloud apps or software - just want to end up with JPGs or PDFs or something.",
-    price: 0,
-    highPriority: false,
-    thumbURL: "",
-    idea: true
-  },
   {
     name: "'Pray More, Worry Less' Mug",
     linkName: "DaySpring",
@@ -50,42 +39,6 @@ const wishlistItems = [
     price: 59.99,
     highPriority: false,
     thumbURL: "images/wishlist/luigismansion.png",
-    idea: false
-  },
-
-  {
-    name: "Brother Sewing & Quilting Machine",
-    linkName: "Amazon",
-    linkURL:
-      "https://smile.amazon.com/dp/B000JQM1DE/?coliid=I1A0FHSY5YAC44&colid=131A43LMVLIBX&psc=1&ref_=lv_ov_lig_dp_it",
-    details: "It’s pricey - would be good gift from a group, though? 😍",
-    price: 149.99,
-    highPriority: false,
-    thumbURL: "images/wishlist/sewingmachine.png",
-    idea: false
-  },
-
-  {
-    name: "Kensington Smartsockets Surge Protector ",
-    linkName: "Amazon",
-    linkURL:
-      "https://smile.amazon.com/Kensington-SmartSockets-Protector-Charging-K64494NA/dp/B07D1YQ1TW/",
-    details: "",
-    price: 49.99,
-    highPriority: true,
-    thumbURL: "images/wishlist/surgeprotector.png",
-    idea: false
-  },
-
-  {
-    name: "MidWest Crate Mat",
-    linkName: "Chewy",
-    linkURL:
-      "https://www.chewy.com/midwest-quiet-time-fleece-reversible/dp/102268",
-    details: "Size: 42 inch",
-    price: 28,
-    highPriority: false,
-    thumbURL: "images/wishlist/cratemat.png",
     idea: false
   },
 
