@@ -60,7 +60,7 @@ class Wishlist extends Component {
             renderOptions={render}
           />
         ))}
-        <div className="last-updated">Last Updated: 12/12/2019</div>
+        <div className="last-updated">Last Updated: 02/10/2020</div>
       </div>
     );
   }

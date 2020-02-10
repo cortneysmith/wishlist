@@ -1,5 +1,15 @@
 const wishlistItems = [
   {
+    name: "Ibanez POWERPAD Acoustic Guitar Gig Bag",
+    linkName: "Guitar Center",
+    linkURL: "https://www.guitarcenter.com/Ibanez/POWERPAD-Acoustic-Guitar-Gig-Bag-Wine-Red-1500000129052.gc",
+    details: "Moss Green",
+    price: 51.95,
+    highPriority: false,
+    thumbURL: "images/wishlist/gigbag.png",
+    idea: false
+  },
+  {
     name: "The Very Best of The Babylon Bee",
     linkName: "The Babylon Bee",
     linkURL: "https://shop.babylonbee.com/collections/most-popular/products/beebook",
